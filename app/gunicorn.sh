@@ -1,2 +1,2 @@
 #!/bin/sh
-uwsgi --socket 0.0.0.0:5000 --protocol=http -w wsgi:app
+gunicorn -w 2 --threads 2 --bind 0.0.0.0:5000 wsgi:app
