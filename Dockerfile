@@ -10,3 +10,6 @@ RUN pipenv install --deploy --system --ignore-pipfile
 COPY ["app/", "/src"]
 WORKDIR /src/
 
+RUN chmod +x /src/gunicorn.sh
+
+CMD ["./gunicorn.sh"]

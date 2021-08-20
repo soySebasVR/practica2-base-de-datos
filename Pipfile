@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 flask = "*"
 werkzeug = "*"
+wheel = "*"
+gunicorn = "*"
 flask-mysql = "*"
 pymysql = "*"
 
