@@ -1,0 +1,48 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="container bg-primary", style="padding:10px;">
+    <div class="container">
+        <div class="bg-light shadow-lg", style="margin: 50px 40px 50px 20px; padding:20px;">
+            <h1>Iniciar Sesión</h1>
+            <form action="{{ url_for('practica2') }}" method="POST">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="Ingrese su nombre">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+            <div class="position-relative">
+                <div class="position-absolute top-50 end-0 translate-middle-y">
+                    ¿No tiene cuenta? Click <a href="{{ url_for('signup') }}">aqui</a> para registrarse
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 50px; padding:10px;">
+        <table class="table table-dark table-striped text-center">
+            <thead>
+                <tr>
+                    <td>name</td>
+                    <td>pasword</td>
+                    <td>paswordHash</td>
+                    <td>status</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contact in users %}
+                <tr>
+                    <td>{{contact.1}}</td>
+                    <td>{{contact.2}}</td>
+                    <td>{{contact.3}}</td>
+                    <td>{{contact.4}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+    </div>
+
+</div>
+
+{% endblock %}

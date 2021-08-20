@@ -1,0 +1,25 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="container bg-primary", style="padding:10px;">
+    <div class="d-flex bd-highlight mb-3 text-light">
+        <div class="p-2 bd-highlight">
+            <h1>Insert Book Forms</h1>
+            <form action="{{ url_for('edit_book', id=books.0) }}" method="POST">
+                <div class="row g-3 align-items-center">
+                    <div>
+                        <label class="col-form-label">Book Title</label>
+                        <input class="form-control" value="{{ books.1 }}" name="book_title">
+                    </div>
+                    <div>
+                        <label class="col-form-label">Book Price</label>
+                        <input class="form-control" value="{{ books.2 }}" name="book_price">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

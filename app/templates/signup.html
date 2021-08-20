@@ -1,0 +1,32 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="container bg-primary", style="padding:10px;">
+    <div class="container">
+        <div class="bg-light shadow-lg", style="margin: 50px 40px 50px 20px; padding:20px;">
+            <h1>Nuevo Usuario</h1>
+            <form action="{{ url_for('signup') }}" method="POST">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="Ingrese su nombre">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña">
+                </div>
+                <div class="mb-3">
+                    <select name="status" class="form-select" aria-label="Default select example">
+                        <option selected>Elige un tipo</option>
+                        <option value="activo">Activo</option>
+                        <option value="inactivo">Inactivo</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+            </form>
+            <div class="position-relative">
+                <div class="position-absolute top-50 end-0 translate-middle-y">
+                    ¿Ya tienes una cuenta? Click <a href="{{ url_for('practica2') }}">aqui</a> para Iniciar sesion
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
