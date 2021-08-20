@@ -5,7 +5,7 @@ services:
     build: .
     restart: always
     ports:
-      - "5000:5000"
+      - 5000:5000
     environment:
         MYSQL_ROOT_PASSWORD: esto_eS_unA_clAve-de_PruebaSuperSecreta
 

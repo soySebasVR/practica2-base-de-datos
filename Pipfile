@@ -7,9 +7,9 @@ name = "pypi"
 flask = "*"
 werkzeug = "*"
 wheel = "*"
-gunicorn = "*"
 flask-mysql = "*"
 pymysql = "*"
+uwsgi = "*"
 
 [dev-packages]
 
