@@ -7,7 +7,7 @@ services:
     ports:
       - 5000:5000
     environment:
-        MYSQL_ROOT_PASSWORD: esto_eS_unA_clAve-de_PruebaSuperSecreta
+        MYSQL_ROOT_PASSWORD: "esto_eS_unA_clAve-de_PruebaSuperSecreta"
         FLASK_APP: index.py
         FLASK_RUN_HOST: 0.0.0.0
     command: ["flask", "run"]
@@ -16,7 +16,7 @@ services:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: esto_eS_unA_clAve_de-PruebaSuperSecreta
+      MYSQL_ROOT_PASSWORD: "esto_eS_unA_clAve_de_PruebaSuperSecreta"
 
   phpmyadmin:
     image: phpmyadmin
